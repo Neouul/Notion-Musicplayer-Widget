@@ -1,3 +1,3 @@
 # Notion-Musicplayer-Widget
 
-![mp-gif](https://github.com/user-attachments/assets/639e8b1e-9fcf-4c40-aa6b-be861aa4f0b0)
+![mp](https://github.com/user-attachments/assets/5d9a6bcf-994d-422c-9a4a-6e6581f773d1)
