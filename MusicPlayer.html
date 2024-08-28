@@ -335,10 +335,10 @@ body {
           </div>
           <div id="player-content">
             <div id="album-art">
-              <img src="https://raw.githubusercontent.com/Neouul/MusicPlayer-media/main/A-thought-on-an-autumn-night-AlbumArt.jpg" class="active" id="_1">
-              <img src="https://raw.githubusercontent.com/Neouul/MusicPlayer-media/main/MANITO-AlbumArt.png" id="_2">
-              <img src="https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_3.jpg" id="_3">
-              <img src="https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_4.jpg" id="_4">
+              <img src="https://raw.githubusercontent.com/Neouul/MusicPlayer-media/main/AlbumArt/A-thought-on-an-autumn-night-AlbumArt.jpg" class="active" id="_1">
+              <img src="https://raw.githubusercontent.com/Neouul/MusicPlayer-media/main/AlbumArt/MANITO-AlbumArt.png" id="_2">
+              <img src="https://raw.githubusercontent.com/Neouul/MusicPlayer-media/main/AlbumArt/AoToNatsu-AlbumArt.png" id="_3">
+              <img src="https://raw.githubusercontent.com/Neouul/MusicPlayer-media/main/AlbumArt/cloudless-AlbumArt.png" id="_4">
               <img src="https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_5.jpg" id="_5">
               <div id="buffer-box">Buffering ...</div>
             </div>
@@ -396,32 +396,33 @@ $(function () {
     buffInterval = null,
     tFlag = false,
     playerTrackColors = [
-      "#fbf3da",
+      //"#fbf3da",
+      "#FBF9DA",
       "#fff7f7",
-      "#EAEAEA",
-      "#EAEAEA",
+      "#f1f79e",
+      "#f7fdff",
       "#EAEAEA"
     ],
     albums = [
       "가을밤에 든 생각",
       "고민중독",
-      "Electro Boy",
-      "Home",
+      "青と夏",
+      "ただ君に晴れ",
       "Proxy (Original Mix)"
     ],
     trackNames = [
       "잔나비",
       "QWER",
-      "Kaaze - Electro Boy",
-      "Jordan Schor - Home",
+      "Mrs. GREEN APPLE",
+      "ヨルシカ",
       "Martin Garrix - Proxy"
     ],
     albumArtworks = ["_1", "_2", "_3", "_4", "_5"],
     trackUrl = [
-      "https://raw.githubusercontent.com/Neouul/MusicPlayer-media/main/JANNABI-01.flac",
-      "https://raw.githubusercontent.com/Neouul/MusicPlayer-media/main/QWER-01.mp3",
-      "https://raw.githubusercontent.com/himalayasingh/music-player-1/master/music/3.mp3",
-      "https://raw.githubusercontent.com/himalayasingh/music-player-1/master/music/4.mp3",
+      "https://raw.githubusercontent.com/Neouul/MusicPlayer-media/main/Music/JANNABI-01.flac",
+      "https://raw.githubusercontent.com/Neouul/MusicPlayer-media/main/Music/QWER-01.mp3",
+      "https://raw.githubusercontent.com/Neouul/MusicPlayer-media/main/Music/Mrs.GREENAPPLE-01.flac",
+      "https://raw.githubusercontent.com/Neouul/MusicPlayer-media/main/Music/YOTUSHIKA-07.mp3",
       "https://raw.githubusercontent.com/himalayasingh/music-player-1/master/music/5.mp3"
     ],
     playPreviousTrackButton = $("#play-previous"),
@@ -435,8 +436,8 @@ $(function () {
         albumArt.addClass("active");
         checkBuffering();
         i.attr("class", "fas fa-pause");
-        audio.play();
         audio.volume = 0.2;
+        audio.play();
       } else {
         playerTrack.removeClass("active");
         albumArt.removeClass("active");
@@ -572,6 +573,7 @@ $(function () {
       bTime = bTime.getTime();
 
       if (flag != 0) {
+        audio.volume = 0.2;
         audio.play();
         playerTrack.addClass("active");
         albumArt.addClass("active");
